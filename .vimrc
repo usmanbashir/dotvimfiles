@@ -1,7 +1,7 @@
 " One .vimrc File To Rule Them All.
 "
-" Version: 1.0.0
-" Last Updated: 10-10-2012 04:13 AM GMT+3
+" Version: 1.0.1
+" Last Updated: 10-10-2012 07:27 AM GMT+3
 " Author: Usman Bashir
 " Maintainer: http://usmanbashir.com
 " License: http://opensource.org/licenses/bsd-license.php
@@ -16,7 +16,8 @@ set nocompatible
 set t_Co=256
 
 " Runtime Path Manipulation to enable Pathogen.
-call pathogen#infect()
+source ~/dotvimfiles/.vim/autoload/pathogen.vim
+call pathogen#infect('~/dotvimfiles/.vim/bundle/')
 
 
 
