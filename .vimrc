@@ -1,7 +1,7 @@
 " One .vimrc File To Rule Them All.
 "
-" Version: 1.0.2
-" Last Updated: 10-10-2012 04:45 PM GMT+3
+" Version: 1.0.3
+" Last Updated: 04-01-2013 08:52 PM GMT+3
 " Author: Usman Bashir
 " Maintainer: http://usmanbashir.com
 " License: http://opensource.org/licenses/bsd-license.php
@@ -152,6 +152,10 @@ nnoremap k gk
 
 " Fold Tag
 nnoremap <leader>ft Vatzf
+
+" Search for highlighted text with * and #
+vmap * y/<c-r>"<cr>
+vmap # y?<c-r>"<cr>
 
 
 " @Misc
