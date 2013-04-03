@@ -1,7 +1,7 @@
 " One .vimrc File To Rule Them All.
 "
-" Version: 1.0.4
-" Last Updated: 03-04-2013 11:33 AM GMT+3
+" Version: 1.1.4
+" Last Updated: 03-04-2013 11:40 AM GMT+3
 " Author: Usman Bashir
 " Maintainer: http://usmanbashir.com
 " License: http://opensource.org/licenses/bsd-license.php
@@ -85,6 +85,11 @@ set laststatus=2
 
 " Use visual bell instead of beeping.
 set visualbell
+
+" Highlight debugger statements.
+"
+" Ruby on Rails Logger:
+au BufEnter *.rb syn match error contained "\<logger\>"
 
 
 
