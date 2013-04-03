@@ -1,7 +1,7 @@
 " One .vimrc File To Rule Them All.
 "
-" Version: 1.0.3
-" Last Updated: 04-01-2013 08:52 PM GMT+3
+" Version: 1.0.4
+" Last Updated: 03-04-2013 11:33 AM GMT+3
 " Author: Usman Bashir
 " Maintainer: http://usmanbashir.com
 " License: http://opensource.org/licenses/bsd-license.php
@@ -31,16 +31,14 @@ filetype plugin indent on
 " @Theme
 
 if has('gui_running')
-	" Desert is a nice color scheme but I should really explore my options.
-	colorscheme desert
+	colorscheme molokai
 
-	" Override the columns and lines in the .gvimrc file if need be for each different computer based on its screen resolution.
+	" Override the columns and lines in the .gvimrc file if need be for each system based on there screen resolution.
 	set columns=170 lines=60
 
 	set guioptions=ac
 else
-	" Need to pick a decent color scheme for the Terminal that works across most of them.
-	colorscheme default
+	colorscheme molokai
 endif
 
 
