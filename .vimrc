@@ -160,6 +160,9 @@ nnoremap <leader>ft Vatzf
 vmap * y/<c-r>"<cr>
 vmap # y?<c-r>"<cr>
 
+" Open the scratch buffer.
+map <leader>c :Scratch<cr>
+
 
 " @Misc
 
