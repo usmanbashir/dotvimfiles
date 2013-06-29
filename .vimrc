@@ -182,6 +182,8 @@ else
     autocmd FileType ruby inoremap <C-@> <C-x><C-u>
 endif
 
+" Toggle the CTag List plugin.
+nmap <leader>t :TlistToggle<cr>
 
 " @Misc
 
