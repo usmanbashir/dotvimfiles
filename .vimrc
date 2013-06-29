@@ -185,6 +185,15 @@ endif
 " Toggle the CTag List plugin.
 nmap <leader>t :TlistToggle<cr>
 
+
+" @Plugins
+
+" RcodeTools
+"
+" Specify the RI executable to use.
+let g:RCT_ri_cmd = "ri --no-pager -f ansi "
+
+
 " @Misc
 
 if v:version >= 700 && has('gui_running')
