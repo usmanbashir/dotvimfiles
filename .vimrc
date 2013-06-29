@@ -163,6 +163,14 @@ vmap # y?<c-r>"<cr>
 " Open the scratch buffer.
 map <leader>c :Scratch<cr>
 
+" Virtual keymap for executing xmpfilter against current Ruby only buffer.
+autocmd FileType ruby nmap <buffer> <leader>r <Plug>(xmpfilter-run)
+autocmd FileType ruby imap <buffer> <leader>r <Plug>(xmpfilter-run)
+
+" Insert/delete annotation marks for xmpfilter against current Ruby only buffer.
+autocmd FileType ruby nmap <buffer> <leader>m <Plug>(xmpfilter-mark)
+autocmd FileType ruby imap <buffer> <leader>m <Plug>(xmpfilter-mark)
+
 
 " @Misc
 
