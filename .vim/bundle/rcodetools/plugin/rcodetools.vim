@@ -164,7 +164,8 @@ endfunction
 if v:version >= 700
     execute "au Filetype ruby setlocal completefunc=" . s:sid . "RCT_completion"
 endif
-execute 'au Filetype ruby nmap <buffer><silent> <C-]> :exec "call ' .
+" TODO: Find a better way to solve the user key mappings being overridden by the plugin.
+execute 'au Filetype ruby nmap <buffer><silent> <C-I> :exec "call ' .
          \ 'RCT_find_tag_or_ri(''" . expand("<cword>") . "'')"<cr>'
 execute 'au Filetype ruby nmap <buffer><silent>' . s:GetOption("RCT_ri_binding", "<LocalLeader>r") .
         \ ' :call ' .  s:sid . 'RCT_smart_ri()<cr>'
