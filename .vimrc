@@ -171,6 +171,17 @@ autocmd FileType ruby imap <buffer> <leader>r <Plug>(xmpfilter-run)
 autocmd FileType ruby nmap <buffer> <leader>m <Plug>(xmpfilter-mark)
 autocmd FileType ruby imap <buffer> <leader>m <Plug>(xmpfilter-mark)
 
+" Code completion by xmpfilter for the current Ruby buffer.
+if has("gui_running")
+    autocmd FileType ruby inoremap <C-Space> <C-x><C-u>
+else
+    " Some Terminals doesn't interpret <C-Space> correctly and Vim understands
+    " it as <C-@> which is a built-in mapping (:help CTRL-@).
+    " 
+    " This overrides the unexpected behavior for non GUI Vim's.
+    autocmd FileType ruby inoremap <C-@> <C-x><C-u>
+endif
+
 
 " @Misc
 
