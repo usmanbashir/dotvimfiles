@@ -1,7 +1,5 @@
 " One .vimrc File To Rule Them All.
 "
-" Version: 1.1.4
-" Last Updated: 03-04-2013 11:40 AM GMT+3
 " Author: Usman Bashir
 " Maintainer: http://usmanbashir.com
 " License: http://opensource.org/licenses/bsd-license.php
