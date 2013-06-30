@@ -31,14 +31,14 @@ filetype plugin indent on
 " @Theme
 
 if has('gui_running')
-	colorscheme molokai
+    colorscheme molokai
 
-	" Override the columns and lines in the .gvimrc file if need be for each system based on there screen resolution.
-	set columns=170 lines=60
+    " Override the columns and lines in the .gvimrc file if need be for each system based on there screen resolution.
+    set columns=170 lines=60
 
-	set guioptions=ac
+    set guioptions=ac
 else
-	colorscheme molokai
+    colorscheme molokai
 endif
 
 
@@ -51,9 +51,9 @@ syntax on
 " Show relative line numbers if the current VIM version supports them.
 " Otherwise default back to regular numbered lines.
 if v:version >= 703
-	set relativenumber
+    set relativenumber
 else
-	set number
+    set number
 endif
 
 " Highlight matching bracket.
