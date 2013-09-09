@@ -84,6 +84,9 @@ set laststatus=2
 " Use visual bell instead of beeping.
 set visualbell
 
+" Hide the mouse cursor when typing.
+set mousehide
+
 " Highlight debugger statements.
 "
 " Ruby on Rails Logger:
