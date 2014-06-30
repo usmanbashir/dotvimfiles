@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/vim-ruby-xmpfilter"]
 	path = .vim/bundle/vim-ruby-xmpfilter
 	url = https://github.com/t9md/vim-ruby-xmpfilter.git
+[submodule ".vim/bundle/vim-slim"]
+	path = .vim/bundle/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
