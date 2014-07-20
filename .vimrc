@@ -97,13 +97,13 @@ au BufEnter *.rb syn match error contained "\<logger\>"
 " @Text Formatting
 
 " No tabs, just spaces!
-set autoindent shiftwidth=4 softtabstop=4
+set autoindent shiftwidth=2 softtabstop=2
 
 " Expand <Tab> with space.
 set expandtab
 
 " Just so that files with tabs can be displayed properly.
-set tabstop=8
+set tabstop=4
 
 " Use existing indents for new indents.
 set copyindent
