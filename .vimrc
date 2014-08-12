@@ -92,6 +92,8 @@ set mousehide
 " Ruby on Rails Logger:
 au BufEnter *.rb syn match error contained "\<logger\>"
 
+" Force syntax coloring for HamlC files.
+au BufNewFile,BufRead *.hamlc set filetype=haml
 
 
 " @Text Formatting
