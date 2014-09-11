@@ -133,7 +133,8 @@ if has('gui_running')
     map <leader>f :set columns=999 guioptions=-R lines=999 fullscreen!<cr>
 endif
 
-" Toggle current line highlighting.
+" Toggle current line highlighting and enable it by default.
+set cursorline
 map <leader>l :set cursorline!<cr>
 
 " Remap jj to escape insert mode as its unlikely I will ever need to type jj and its much faster then hitting the <Esc> key.
