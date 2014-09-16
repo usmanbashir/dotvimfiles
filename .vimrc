@@ -124,6 +124,9 @@ let mapleader = ","
 " It's one less key to hit every time I want to execute a command.
 nnoremap ; :
 
+" Clear search highlighting.
+map <leader>h :noh<cr>
+
 " The Zen Masters gateway in to the Zen Write Room.
 "
 " Need to change this from a simple mapping in to a function that
