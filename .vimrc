@@ -211,6 +211,15 @@ endif
 nmap <leader>t :TlistToggle<cr>
 
 
+" @Auto Commands
+
+" Jump to last cursor position unless it's invalid or in an event handler
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
+
 " @Plugins
 
 " RcodeTools
