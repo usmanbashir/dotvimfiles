@@ -138,7 +138,14 @@ endif
 
 " Toggle current line highlighting and enable it by default.
 set cursorline
-map <leader>l :set cursorline!<cr>
+map <leader>ll :set cursorline!<cr>
+
+" Toggle line numbers.
+if v:version >= 703
+  map <leader>ln :set relativenumber!<cr>
+else
+  map <leader>ln :set number!<cr>
+endif
 
 " Remap jj to escape insert mode as its unlikely I will ever need to type jj and its much faster then hitting the <Esc> key.
 inoremap jj <Esc>
@@ -216,7 +223,7 @@ nmap <leader>t :TlistToggle<cr>
 
 " @Auto Commands
 
-" Jump to last cursor position unless it's invalid or in an event handler
+" Jump to last cursor position unless it's invalid or in an event handler.
 autocmd BufReadPost *
   \ if line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
