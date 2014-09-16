@@ -156,6 +156,11 @@ map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
+" Open the current Git Diff in a Tab.
+command! GdiffInTab tabedit %|vsplit|Gdiff
+nnoremap <leader>d :GdiffInTab<cr>
+nnoremap <leader>D :tabclose<cr>
+
 " Reselect the text that was just pasted so I can perform commands like indentation on it.
 nnoremap <leader>v V`]
 
