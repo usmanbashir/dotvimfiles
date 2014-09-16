@@ -27,6 +27,8 @@ filetype plugin indent on
 " Use the stronger BlowFish encryption by default.
 set cryptmethod=blowfish
 
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
 
 
 " @Theme
