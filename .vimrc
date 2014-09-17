@@ -222,6 +222,18 @@ endif
 " Toggle the CTag List plugin.
 nmap <leader>t :TlistToggle<cr>
 
+" Indent if we're at the beginning of a line. Otherwise, do code completion.
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
 
 " @Auto Commands
 
