@@ -249,6 +249,9 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
+" Force Vim to register *.md files as Markdown files.
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 
 " @Plugins
 
