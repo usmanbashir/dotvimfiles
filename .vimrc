@@ -263,10 +263,11 @@ let g:RCT_ri_cmd = "ri --no-pager -f ansi "
 
 " @Misc
 
-if v:version >= 700 && has('gui_running')
-	" Turn on spell checking for the English language.
-	set spl=en
-	set spell
+" Toggle spell checking.
+if v:version >= 700
+	set spelllang=en_us
+	hi SpellBad cterm=underline
+	nmap <silent> <leader>s :set spell!<CR>
 endif
 
 set fileformats=unix
