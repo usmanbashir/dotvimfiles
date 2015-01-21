@@ -115,6 +115,9 @@ set tabstop=4
 " Use existing indents for new indents.
 set copyindent
 
+" Set maximum line width for all documents. 
+set textwidth=90
+set formatoptions=tcaw
 
 
 " @Mappings
