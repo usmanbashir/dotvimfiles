@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/vim-tagbar"]
 	path = .vim/bundle/vim-tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule ".vim/bundle/vim-nrrwrgn"]
+	path = .vim/bundle/vim-nrrwrgn
+	url = git@github.com:chrisbra/NrrwRgn.git
