@@ -265,6 +265,11 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Specify the RI executable to use.
 let g:RCT_ri_cmd = "ri --no-pager -f ansi "
 
+" EasyTags
+"
+" Run Exuberant Ctags in the background.
+let g:easytags_async = 1
+
 
 " @Misc
 

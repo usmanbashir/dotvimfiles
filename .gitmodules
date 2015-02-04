@@ -70,3 +70,9 @@
 [submodule ".vim/bundle/vim-syntax-range"]
 	path = .vim/bundle/vim-syntax-range
 	url = git@github.com:vim-scripts/SyntaxRange.git
+[submodule ".vim/bundle/vim-xolox-misc"]
+	path = .vim/bundle/vim-xolox-misc
+	url = git@github.com:xolox/vim-misc.git
+[submodule ".vim/bundle/vim-easytags"]
+	path = .vim/bundle/vim-easytags
+	url = git@github.com:xolox/vim-easytags.git
