@@ -46,3 +46,9 @@
 [submodule ".vim/bundle/wikilink"]
 	path = .vim/bundle/wikilink
 	url = git@github.com:mmai/wikilink.git
+[submodule ".vim/bundle/vim-orgmode"]
+	path = .vim/bundle/vim-orgmode
+	url = git@github.com:jceb/vim-orgmode.git
+[submodule ".vim/bundle/vim-speeddating"]
+	path = .vim/bundle/vim-speeddating
+	url = git@github.com:tpope/vim-speeddating.git
