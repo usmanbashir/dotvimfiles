@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vim-calendar"]
 	path = .vim/bundle/vim-calendar
 	url = git@github.com:mattn/calendar-vim.git
+[submodule ".vim/bundle/vim-utl"]
+	path = .vim/bundle/vim-utl
+	url = git@github.com:vim-scripts/utl.vim.git
