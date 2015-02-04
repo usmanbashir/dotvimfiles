@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/vim-nrrwrgn"]
 	path = .vim/bundle/vim-nrrwrgn
 	url = git@github.com:chrisbra/NrrwRgn.git
+[submodule ".vim/bundle/vim-syntax-range"]
+	path = .vim/bundle/vim-syntax-range
+	url = git@github.com:vim-scripts/SyntaxRange.git
