@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/vim-utl"]
 	path = .vim/bundle/vim-utl
 	url = git@github.com:vim-scripts/utl.vim.git
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
