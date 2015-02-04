@@ -124,6 +124,7 @@ set formatoptions=tcaw
 
 " Change the map leader from \ to ,
 let mapleader = ","
+let maplocalleader = '\'
 
 " Make ; do the same thing as :
 " It's one less key to hit every time I want to execute a command.
