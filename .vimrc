@@ -230,6 +230,7 @@ endif
 
 " Toggle the CTag List plugin.
 nmap <leader>t :TlistToggle<cr>
+nmap <F8> :TagbarToggle<cr>
 
 " Indent if we're at the beginning of a line. Otherwise, do code completion.
 function! InsertTabWrapper()
