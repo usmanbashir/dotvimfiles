@@ -13,22 +13,54 @@ set nocompatible
 
 set t_Co=256
 
-" Runtime Path Manipulation to enable Pathogen.
-filetype off
-
-set runtimepath=~/dotvimfiles/.vim,$VIMRUNTIME
-
-source ~/dotvimfiles/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-
-call pathogen#infect()
-
-filetype plugin indent on
-
 " Use the stronger BlowFish encryption by default.
 set cryptmethod=blowfish
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start
+
+
+" @Plugins
+
+" Runtime Path Manipulation to enable Plug.
+set runtimepath=~/dotvimfiles/.vim,$VIMRUNTIME
+
+call plug#begin('~/dotvimfiles/.vim/plugged')
+
+Plug 'tomasr/molokai'
+Plug 'heartsentwined/vim-emblem'
+Plug 'mmai/wikilink'
+Plug 'jceb/vim-orgmode'
+Plug 'mattn/calendar-vim'
+Plug 'majutsushi/tagbar'
+Plug 'chrisbra/NrrwRgn'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-powerline'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-haml'
+Plug 'scrooloose/syntastic'
+Plug 't9md/vim-ruby-xmpfilter'
+Plug 'slim-template/vim-slim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'wincent/Command-T', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
+Plug 'JoshCheek/rcodetools'
+Plug 'mtth/scratch.vim'
+Plug 'vim-scripts/SyntaxRange'
+Plug 'vim-scripts/utl.vim'
+Plug 'vim-scripts/taglist.vim'
+
+call plug#end()
 
 
 " @Theme
