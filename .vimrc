@@ -62,6 +62,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'roblillack/vim-bufferlist'
 Plug 'Shougo/neocomplcache.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'} | Plug 'Shougo/vimshell.vim'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
