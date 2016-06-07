@@ -60,6 +60,7 @@ Plug 'vim-scripts/utl.vim'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'roblillack/vim-bufferlist'
 
 call plug#end()
 
@@ -336,6 +337,9 @@ let g:RCT_ri_cmd = "ri --no-pager -f ansi "
 "
 " Run Exuberant Ctags in the background.
 let g:easytags_async = 1
+
+" BufferList
+map <silent> <F3> :call BufferList()<CR>
 
 
 " @Misc
