@@ -37,7 +37,6 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-repeat'
@@ -59,8 +58,24 @@ Plug 'mtth/scratch.vim'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'vim-scripts/utl.vim'
 Plug 'vim-scripts/taglist.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+
+
+" @Powerline
+
+let g:airline_theme = 'cool'
+let g:airline_inactive_collapse = 0
+let g:airline_powerline_fonts = 1
+
+" Make sure the GUI is also using th patched Powerline font.
+if has('gui_running')
+  set guifont=Monaco\ for\ Powerline:h14
+endif
+
 
 
 " @Theme
