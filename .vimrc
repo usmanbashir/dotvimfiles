@@ -20,7 +20,7 @@ set cryptmethod=blowfish
 set backspace=indent,eol,start
 
 
-" @Plugins
+" @Plugin Manager
 
 " Runtime Path Manipulation to enable Plug.
 set runtimepath=~/dotvimfiles/.vim,$VIMRUNTIME
@@ -63,19 +63,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'roblillack/vim-bufferlist'
 
 call plug#end()
-
-
-
-" @Powerline
-
-let g:airline_theme = 'cool'
-let g:airline_inactive_collapse = 0
-let g:airline_powerline_fonts = 1
-
-" Make sure the GUI is also using th patched Powerline font.
-if has('gui_running')
-  set guifont=Monaco\ for\ Powerline:h14
-endif
 
 
 
@@ -333,13 +320,28 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Specify the RI executable to use.
 let g:RCT_ri_cmd = "ri --no-pager -f ansi "
 
+
 " EasyTags
 "
 " Run Exuberant Ctags in the background.
 let g:easytags_async = 1
 
+
 " BufferList
 map <silent> <F3> :call BufferList()<CR>
+
+
+" Powerline
+
+let g:airline_theme = 'cool'
+let g:airline_inactive_collapse = 0
+let g:airline_powerline_fonts = 1
+
+" Make sure the GUI is also using th patched Powerline font.
+if has('gui_running')
+  set guifont=Monaco\ for\ Powerline:h14
+endif
+
 
 
 " @Misc
