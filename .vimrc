@@ -154,7 +154,7 @@ set tabstop=4
 " Use existing indents for new indents.
 set copyindent
 
-" Set maximum line width for all documents. 
+" Set maximum line width for all documents.
 set textwidth=90
 set formatoptions=tcaw
 
@@ -175,7 +175,7 @@ map <leader>h :noh<cr>
 " The Zen Masters gateway in to the Zen Write Room.
 "
 " Need to change this from a simple mapping in to a function that
-" can toggle between the Zen Write Room and just plan vim and use 
+" can toggle between the Zen Write Room and just plan vim and use
 " the <F1> key to do so.
 if has('gui_running')
     map <leader>f :set columns=999 guioptions=-R lines=999 fullscreen!<cr>
@@ -263,7 +263,7 @@ if has("gui_running")
 else
     " Some Terminals doesn't interpret <C-Space> correctly and Vim understands
     " it as <C-@> which is a built-in mapping (:help CTRL-@).
-    " 
+    "
     " This overrides the unexpected behavior for non GUI Vim's.
     autocmd FileType ruby inoremap <C-@> <C-x><C-u>
 endif
@@ -376,9 +376,9 @@ xmap ah <Plug>GitGutterTextObjectOuterVisual
 
 " Toggle spell checking.
 if v:version >= 700
-	set spelllang=en_us
-	hi SpellBad cterm=underline
-	nmap <silent> <leader>s :set spell!<CR>
+  set spelllang=en_us
+  hi SpellBad cterm=underline
+  nmap <silent> <leader>s :set spell!<CR>
 endif
 
 set fileformats=unix
