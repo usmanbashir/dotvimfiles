@@ -199,17 +199,21 @@ inoremap jj <Esc>
 nmap <leader>n :NERDTreeToggle<cr>
 
 " CommandT Mappings
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
-map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
-
+"
+" Go to lines and tags.
+map <leader>gl :CommandTFlush<cr>\|:CommandTLine<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 
+" Fuzzy find files.
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+
+" Find a buffer.
+map <leader>b :CommandTFlush<cr>\|:CommandTBuffer<cr>
+
+" For Vim only use.
+map <leader>vc :CommandTFlush<cr>\|:CommandTCommand<cr>
+map <leader>vh :CommandTFlush<cr>\|:CommandTHelp<cr>
+map <leader>vhh :CommandTFlush<cr>\|:CommandTHistory<cr>
 
 " Open the current Git Diff in a Tab.
 command! GdiffInTab tabedit %|vsplit|Gdiff
@@ -261,7 +265,7 @@ autocmd FileType ruby imap <buffer> <leader>m <Plug>(xmpfilter-mark)
 if has("gui_running")
     autocmd FileType ruby inoremap <C-Space> <C-x><C-u>
 else
-    " Some Terminals doesn't interpret <C-Space> correctly and Vim understands
+    " Some Terminals don't interpret <C-Space> correctly and Vim understands
     " it as <C-@> which is a built-in mapping (:help CTRL-@).
     "
     " This overrides the unexpected behavior for non GUI Vim's.
