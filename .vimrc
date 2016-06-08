@@ -63,6 +63,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'roblillack/vim-bufferlist'
 Plug 'Shougo/neocomplcache.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'} | Plug 'Shougo/vimshell.vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -355,6 +356,18 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" GitGutter
+
+" Reduce the default Vim update time down from 4 seconds to 250ms.
+set updatetime=250
+
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+omap ih <Plug>GitGutterTextObjectInnerPending
+omap ah <Plug>GitGutterTextObjectOuterPending
+xmap ih <Plug>GitGutterTextObjectInnerVisual
+xmap ah <Plug>GitGutterTextObjectOuterVisual
 
 
 
