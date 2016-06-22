@@ -65,6 +65,7 @@ Plug 'roblillack/vim-bufferlist'
 Plug 'Shougo/neocomplcache.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'} | Plug 'Shougo/vimshell.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
+Plug 'benmills/vimux'
 
 call plug#end()
 
@@ -374,6 +375,32 @@ omap ah <Plug>GitGutterTextObjectOuterPending
 xmap ih <Plug>GitGutterTextObjectInnerVisual
 xmap ah <Plug>GitGutterTextObjectOuterVisual
 
+" Vimux
+
+" Run the current Ruby file through Docker
+map <Leader>rd :call VimuxRunCommand("eval $(docker-machine env) && docker-compose exec web ruby " . bufname("%"))<CR>
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR>
+
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "50"
+let VimuxResetSequence = "C-l"
 
 
 " @Misc
