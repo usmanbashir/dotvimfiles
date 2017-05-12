@@ -1,8 +1,8 @@
-#dotvimfiles#
+# dotvimfiles
 _The sacred VIM directory._
 - - -
 
-####__Installation:__####
+#### Installation:
 
 Clone the repository to your home directory:
 
@@ -19,6 +19,6 @@ Finally create a __symlink__ to the _.vimrc_ file in your home directory:
     ln -s ~/dotvimfiles/.vimrc ~/.vimrc
 
 
-####__Feedback__####
+#### Feedback
 - - -
 Suggestions and Improvements are [welcome](https://github.com/usmanbashir/dotvimfiles/issues)!
