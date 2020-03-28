@@ -29,43 +29,48 @@ call plug#begin('~/dotvimfiles/.vim/plugged')
 
 Plug 'tomasr/molokai'
 Plug 'heartsentwined/vim-emblem'
-Plug 'mmai/wikilink'
-Plug 'jceb/vim-orgmode'
-Plug 'mattn/calendar-vim'
+"Plug 'mmai/wikilink'
+"Plug 'jceb/vim-orgmode'
+"Plug 'mattn/calendar-vim'
 Plug 'majutsushi/tagbar'
 Plug 'chrisbra/NrrwRgn'
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
+"Plug 'xolox/vim-easytags'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-bundler'
+"Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
+"Plug 'tpope/vim-rails'
+"Plug 'tpope/vim-rake'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-haml'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 't9md/vim-ruby-xmpfilter'
-Plug 'slim-template/vim-slim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'wincent/Command-T', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
-Plug 'JoshCheek/rcodetools'
-Plug 'mtth/scratch.vim'
+"Plug 'mustache/vim-mustache-handlebars'
+" Plug 'wincent/Command-T', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
+"Plug 'JoshCheek/rcodetools'
+"Plug 'mtth/scratch.vim'
 Plug 'vim-scripts/SyntaxRange'
-Plug 'vim-scripts/utl.vim'
+"Plug 'vim-scripts/utl.vim'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'roblillack/vim-bufferlist'
-Plug 'Shougo/neocomplcache.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'} | Plug 'Shougo/vimshell.vim'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'roblillack/vim-bufferlist'
+"Plug 'Shougo/neocomplcache.vim' | Plug 'Shougo/unite.vim' | Plug 'Shougo/vimproc.vim', {'do': 'make'} | Plug 'Shougo/vimshell.vim'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
-Plug 'benmills/vimux'
+"Plug 'benmills/vimux'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -206,7 +211,7 @@ map <leader>gl :CommandTFlush<cr>\|:CommandTLine<cr>
 map <leader>gt :CommandTFlush<cr>\|:CommandTTag<cr>
 
 " Fuzzy find files.
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 
 " Find a buffer.
 map <leader>b :CommandTFlush<cr>\|:CommandTBuffer<cr>
@@ -298,16 +303,23 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 let g:EasyMotion_smartcase = 1
 
 " Indent if we're at the beginning of a line. Otherwise, do code completion.
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+"function! InsertTabWrapper()
+"  let col = col('.') - 1
+"  if !col || getline('.')[col - 1] !~ '\k'
+"    return "\<tab>"
+"  else
+"    return "\<c-p>"
+"  endif
+"endfunction
+"inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+"inoremap <s-tab> <c-n>
+
+" Allow pasting code without trying to format it in any way.
+map <F10> :set paste<CR>
+map <F11> :set nopaste<CR>
+imap <F10> <C-O>:set paste<CR>
+imap <F11> <nop>
+set pastetoggle=<F11>
 
 
 " @Auto Commands
@@ -430,3 +442,59 @@ set directory=~/.vim/tmp,/var/tmp,.
 
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
+
+" CoC Config
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+"set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Add status line support, for integration with other plugin, checkout `:h coc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+
+
+" indentLine Config
+" let g:indentLine_char_list = ['▏', '|', '⎸', '¦', '┆', '┊']
+let g:indentLine_char_list = ['▏']
+
+
+" ALE Config
+let g:airline#extensions#ale#enabled = 1
+
+
+
+" CtrlP Config
+let g:ctrlp_map = '<leader>p'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
